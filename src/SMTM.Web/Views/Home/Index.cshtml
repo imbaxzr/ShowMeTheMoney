@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+    .metrouicss .page .operationPanel button {
+        margin-bottom: 30px;
+        width: 251px;
+    }
+
+    .calendar {
+        float: left;
+        margin-left: 45px;
+        margin-right: 42px;
+        width: 686px;
+    }
+
+    .page h1 {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .metrouicss .calendar td {
+        line-height: 44px;
+    }
+
+    .userList {
+        float: left;
+        padding: 10px;
+        width: 163px;
+    }
+
+    .operationPanel {
+        float: left;
+        /*padding: 0 10px 10px 56px;*/
+        width: 266px;
+    }
+
+        .operationPanel button {
+        }
+
+    .userList .page-region-content .body-text {
+        font-size: 15px;
+        font-weight: 100;
+        margin-bottom: 17px;
+    }
+
+    #cal1 .current-day {
+        background-color: #2D89EF !important;
+    }
+
+    .metrouicss .calendar .weekdays td {
+        color: #2D89EF;
+    }
+</style>
+
+
+<h1>Spotfire</h1>
+<div class="operationPanel">
+    <button class="bg-color-blue command-button fg-color-white createNewAction">
+        Create New Action
+        <small>Click here to create a new Action !</small>
+    </button>
+    <button class="bg-color-blue command-button fg-color-white addUser">
+        Add New Member
+        <small>Click here to add a new member !</small>
+    </button>
+</div>
+<script>
+    $(function () {
+        $('.createNewAction').click(function () {
+            window.location = "/Action/CreateNewAction";
+        });
+        $('.addUser').click(function () {
+            window.location = "/User/AddUser";
+        });
+    })
+
+</script>
+<div id="cal1" class="calendar " data-param-lang="en" data-role="calendar"></div>
+
+<div class="userList">@Html.Action("UserList")</div>
+
+
+
+
+
+

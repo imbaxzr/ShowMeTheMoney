@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+
+  <class name="SMTM.Model.ExpenditureLog,SMTM.Model" table="expenditure_log" lazy="false">
+
+    <id name="Id" column="expenditure_id" type="String">
+    </id>
+    <property name="UserId" column="user_id" type="String" length="108"  />
+    <property name="ActionId" column="Action_id" type="String" length="108"  />
+    <property name="ExpenditureTotall" column="expenditure_totall" type="Decimal" />
+    <property name="ExpenditureTime" column="expenditure_time" type="DateTime" />
+
+  </class>
+
+</hibernate-mapping>

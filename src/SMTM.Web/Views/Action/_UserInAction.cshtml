@@ -1,0 +1,31 @@
+﻿@using SMTM.Model;
+@model List<UserInfo>
+
+@if (Model != null)
+{
+    foreach (var user in Model)
+    {
+    <button>
+        <input type="hidden" value="@user.Id" class="userId" />
+        @user.UserName
+        <i class=""></i>
+
+    </button>
+    
+    }
+}
+
+<script>
+
+    $(function () {
+        $('button').click(function () {
+            var $i = $("i", $(this));
+            if ($i.hasClass("icon-bookmark")) {
+                $i.removeClass("icon-bookmark");
+            }
+            else {
+                $i.addClass("icon-bookmark");
+            }
+        });
+    })
+</script>

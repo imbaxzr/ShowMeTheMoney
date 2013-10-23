@@ -1,0 +1,39 @@
+﻿@using SMTM.Model;
+@model List<UserInfo>
+
+@if (Model != null)
+{
+    <div class="input-control select">
+        <select class="payer">
+            <option value="0">Select A Payer</option>
+            @foreach (var user in Model)
+            {
+                <option value="@user.Id">@user.UserName</option>
+            }
+        </select>
+    </div>
+}
+<script>
+
+    $(function () {
+        $('.payer').val(0);
+
+        $('.payer').change(function () {
+            if ($('.payer').val() != "0") {
+                $('.user-info button').each(function () {
+                    $(this).show();
+                })
+                $('.userId', '.user-info button').each(function () {
+                    if ($(this).val() == $('.payer').val()) {
+                        $(this).parent().hide();
+                    }
+                })
+            }
+            else if ($('.payer').val() == "0") {
+                $('.user-info button').each(function () {
+                    $(this).show();
+                })
+            }
+        });
+    })
+</script>

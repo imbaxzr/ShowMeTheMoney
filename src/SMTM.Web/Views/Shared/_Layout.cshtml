@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link href="~/Content/Metro/modern.css" rel="stylesheet" />
+    <link href="~/Content/Metro/modern-responsive.css" rel="stylesheet" />
+    <link href="~/Content/Metro/site.css" rel="stylesheet" />
+
+    <script src="~/Scripts/Base/jquery-1.8.2.js"></script>
+    <script src="~/Scripts/Metro/moment.js"></script>
+    <script src="~/Scripts/Metro/moment_langs.js"></script>
+    <script src="~/Scripts/Metro/pagecontrol.js"></script>
+    <script src="~/Scripts/Metro/calendar.js"></script>
+    <script src="~/Scripts/Metro/accordion.js"></script>
+    <script src="~/Scripts/Metro/buttonset.js"></script>
+    <script src="~/Scripts/Metro/pagelist.js"></script>
+    <script src="~/Scripts/Metro/rating.js"></script>
+    <script src="~/Scripts/Metro/slider.js"></script>
+    <script src="~/Scripts/Metro/tile-drag.js"></script>
+    <script src="~/Scripts/Metro/tile-slider.js"></script>
+    <script src="~/Scripts/Metro/carousel.js"></script>
+    <script src="~/Scripts/Metro/dialog.js"></script>
+
+    @*
+    <script src="~/Scripts/Metro/dropdown.js"></script>
+
+     <script src="~/Scripts/Metro/contextmenu.js"></script>
+    <script src="~/Scripts/Metro/start-menu.js"></script>
+     <script src="~/Scripts/Metro/input-control.js"></script>
+    *@
+    <title>Show Me The Money !</title>
+    <style type="text/css">
+        input {
+            font-family: 'Segoe UI Semilight','Open Sans',Verdana,Arial,Helvetica,sans-serif;
+        }
+    </style>
+</head>
+<body class="metrouicss">
+    <div class="logInDiv"></div>
+    <div class="page">
+        <div class="nav-bar">
+            <div class="nav-bar-inner padding10">
+                <a href="/Home/Index">
+                    <span class="element brand">Show Me The Money !</span>
+                </a>
+                <div class="divider"></div>
+                <ul class="menu">
+                   @* <li><a href="/">All Actions</a></li>
+                    <li><a href="/">All Members</a></li>*@
+                    @*<li style="float: right">@Html.Action("UserName", "User")</li>*@
+                </ul>
+            </div>
+        </div>
+
+        <div class="page secondary">
+            <section>
+                @RenderBody()
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>

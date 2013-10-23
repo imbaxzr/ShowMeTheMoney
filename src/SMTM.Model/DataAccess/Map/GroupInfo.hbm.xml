@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+
+  <class name="SMTM.Model.GroupInfo,SMTM.Model" table="group_info" lazy="false">
+
+    <id name="Id" column="group_id" type="String">
+    </id>
+    <property name="GroupName" column="group_name" type="String" length="150"  />
+
+  </class>
+
+</hibernate-mapping>

@@ -1,0 +1,39 @@
+﻿@using SMTM.Model;
+@model List<UserInfo>
+
+<style type="text/css">
+    .metrouicss .userList .page-region-content .turn-total {
+        margin-bottom: 40px;
+    }
+
+    .metrouicss .userList .page-region-content h5 {
+        margin-bottom: 0px;
+        font-weight: 100;
+    }
+
+    .metrouicss .userList .page-region-content ul {
+        margin: 0;
+    }
+
+    .metrouicss .userList .page-region-content body-text {
+        color: rgba(0, 0, 0, 0.6);
+
+    }
+
+</style>
+@if (Model != null)
+{
+    <div class="page-region-content">
+
+        <h2 class="fg-color-blue">@Model.First().UserName</h2>
+        <div class="body-text fg-color-blue turn-total">￥：@Model.First().UserTotal.ToString("f2")</div>
+        @{
+    Model.RemoveAt(0);
+        }
+        @foreach (var user in Model)
+        {
+            <h3 class="">@user.UserName</h3>
+            <div class="body-text">￥：@user.UserTotal.ToString("f2")</div>
+        }
+    </div>
+}

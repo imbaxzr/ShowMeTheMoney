@@ -1,0 +1,18 @@
+﻿@model SMTM.Model.UserInfo
+
+@if (Model == null)
+{
+    <a href="#" class="sign">Sign in</a>
+}
+else
+{
+    <a href="#">@Model.UserName</a>
+}
+
+<script>
+    $(function () {
+        $('.sign').live("click", function () {
+            $('.logInDiv').load("/User/LogIn");
+        });
+    })
+</script>

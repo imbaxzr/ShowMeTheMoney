@@ -1,0 +1,72 @@
+﻿<style type="text/css">
+    .mainPanel {
+        width: 100%;
+        height: 768px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 9999;
+        opacity: 0.8;
+        background: #d6e0ee;
+    }
+
+    .logInPanel {
+        background: none repeat scroll 0 0 white;
+        height: 465px;
+        left: 32%;
+        padding-left: 50px;
+        padding-right: 50px;
+        position: absolute;
+        top: 10%;
+        width: 500px;
+        z-index: 99999;
+    }
+
+    .metrouicss .logInPanel .closeLogIn {
+        cursor: pointer;
+        left: 94%;
+        position: absolute;
+        top: 2%;
+    }
+
+    .metrouicss .logInPanel h3 {
+        margin-bottom: 41px;
+        margin-top: 43px;
+    }
+
+    .metrouicss .logInPanel .input-control {
+        margin-bottom: 24px;
+    }
+</style>
+<div class="logInPanel">
+    <i class="icon-cancel-2 closeLogIn"></i>
+    <h3>Sign in</h3>
+    <div class="input-control text">
+        <input class="userAccount" type="text" placeholder="Please enter your Account">
+    </div>
+    <div class="input-control text">
+        <input class="userPassword" type="text" placeholder="Please enter your Password">
+    </div>
+    <button class="button saveAction bg-color-greenLight fg-color-white addUser">
+        Sign in
+    </button>
+</div>
+<div class="mainPanel">
+</div>
+
+<script>
+    $(function () {
+        setCloseEvent();
+    });
+
+    function setCloseEvent() {
+        $('.closeLogIn').click(function () {
+            $('.logInDiv').empty();
+
+        });
+    }
+
+    function submit() {
+
+    }
+</script>

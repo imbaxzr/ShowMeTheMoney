@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+
+  <class name="SMTM.Model.ActionInfo,SMTM.Model" table="Action_info" lazy="false">
+
+    <id name="Id" column="Action_id" type="String">
+    </id>
+    <property name="GroupId" column="group_id" type="String" length="108"  />
+    <property name="ActionName" column="Action_name" type="String" length="150"  />
+    <property name="ActionDate" column="Action_date" type="DateTime" />
+    <property name="ActionAmount" column="Action_amount" type="Decimal" />
+
+  </class>
+
+</hibernate-mapping>

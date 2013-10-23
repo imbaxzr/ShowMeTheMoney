@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+
+  <class name="SMTM.Model.WalletInfo, SMTM.Model" table="wallet_info" lazy="false">
+
+    <id name="Id" column="wallet_id" type="String">
+    </id>
+    <property name="UserId" column="user_id" type="String" length="108"  />
+    <property name="WalletTotal" column="wallet_total" type="Decimal" />
+
+  </class>
+
+</hibernate-mapping>

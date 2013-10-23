@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+
+  <class name="SMTM.Model.UserInfo,SMTM.Model" table="user_info" lazy="false">
+
+    <id name="Id" column="user_id" type="String">
+    </id>
+    <property name="WalletId" column="walle_id" type="String" length="108"  />
+    <property name="UserName" column="user_name" type="String" length="150"  />
+    <property name="UserAccount" column="user_account" type="String" length="150"  />
+    <property name="UserPassword" column="user_password" type="String" length="150"  />
+    <property name="UserCreateDate" column="user_create_date" type="datetime" />
+    <property name="UserTotal" column="user_total" type="decimal" />
+
+  </class>
+
+</hibernate-mapping>

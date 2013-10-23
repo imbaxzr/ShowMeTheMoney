@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+
+  <class name="SMTM.Model.UserActionRelation,SMTM.Model" table="user_Action_relation" lazy="false">
+
+    <id name="UserId" column="user_id" type="String">
+    </id>
+    <property name="ActionId" column="Action_id" type="String"/>
+    <property name="CreateDate" column="create_date" type="DateTime" />
+    <property name="CreatePersonId" column="create_person_id" type="String" />
+
+  </class>
+
+</hibernate-mapping>
